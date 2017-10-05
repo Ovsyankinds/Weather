@@ -12,6 +12,8 @@
 		158BB19B1F86215D00A1926B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158BB1991F86215D00A1926B /* Main.storyboard */; };
 		158BB19D1F86215D00A1926B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 158BB19C1F86215D00A1926B /* Assets.xcassets */; };
 		158BB1A01F86215D00A1926B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158BB19E1F86215D00A1926B /* LaunchScreen.storyboard */; };
+		158BB1A81F8627A600A1926B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158BB1A71F8627A600A1926B /* Reachability.swift */; };
+		158BB1AC1F86934100A1926B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158BB1AB1F86934100A1926B /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		158BB19C1F86215D00A1926B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		158BB19F1F86215D00A1926B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		158BB1A11F86215D00A1926B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		158BB1A71F8627A600A1926B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		158BB1AB1F86934100A1926B /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				158BB1951F86215D00A1926B /* AppDelegate.swift */,
+				158BB1AB1F86934100A1926B /* WeatherViewController.swift */,
+				158BB1A71F8627A600A1926B /* Reachability.swift */,
 				158BB1971F86215D00A1926B /* ViewController.swift */,
 				158BB1991F86215D00A1926B /* Main.storyboard */,
 				158BB19C1F86215D00A1926B /* Assets.xcassets */,
@@ -137,7 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				158BB1981F86215D00A1926B /* ViewController.swift in Sources */,
+				158BB1AC1F86934100A1926B /* WeatherViewController.swift in Sources */,
 				158BB1961F86215D00A1926B /* AppDelegate.swift in Sources */,
+				158BB1A81F8627A600A1926B /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
