@@ -14,7 +14,36 @@
 		158BB1A01F86215D00A1926B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158BB19E1F86215D00A1926B /* LaunchScreen.storyboard */; };
 		158BB1A81F8627A600A1926B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158BB1A71F8627A600A1926B /* Reachability.swift */; };
 		158BB1AC1F86934100A1926B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158BB1AB1F86934100A1926B /* WeatherViewController.swift */; };
+		158BB1F11F8BBC4400A1926B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1EC1F8BBC4400A1926B /* Alamofire.framework */; };
+		158BB1F21F8BBC4400A1926B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1EC1F8BBC4400A1926B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		158BB1F31F8BBC4400A1926B /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1ED1F8BBC4400A1926B /* Kingfisher.framework */; };
+		158BB1F41F8BBC4400A1926B /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1ED1F8BBC4400A1926B /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		158BB1F51F8BBC4400A1926B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1EE1F8BBC4400A1926B /* Realm.framework */; };
+		158BB1F61F8BBC4400A1926B /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1EE1F8BBC4400A1926B /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		158BB1F71F8BBC4400A1926B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1EF1F8BBC4400A1926B /* RealmSwift.framework */; };
+		158BB1F81F8BBC4400A1926B /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1EF1F8BBC4400A1926B /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		158BB1F91F8BBC4400A1926B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1F01F8BBC4400A1926B /* RxSwift.framework */; };
+		158BB1FA1F8BBC4400A1926B /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1F01F8BBC4400A1926B /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		158BB1FE1F8BBC5900A1926B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1FD1F8BBC5900A1926B /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		158BB1FB1F8BBC4400A1926B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				158BB1FA1F8BBC4400A1926B /* RxSwift.framework in Embed Frameworks */,
+				158BB1F61F8BBC4400A1926B /* Realm.framework in Embed Frameworks */,
+				158BB1F41F8BBC4400A1926B /* Kingfisher.framework in Embed Frameworks */,
+				158BB1F81F8BBC4400A1926B /* RealmSwift.framework in Embed Frameworks */,
+				158BB1F21F8BBC4400A1926B /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		158BB1921F86215D00A1926B /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +55,12 @@
 		158BB1A11F86215D00A1926B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		158BB1A71F8627A600A1926B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		158BB1AB1F86934100A1926B /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = SOURCE_ROOT; };
+		158BB1EC1F8BBC4400A1926B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		158BB1ED1F8BBC4400A1926B /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		158BB1EE1F8BBC4400A1926B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		158BB1EF1F8BBC4400A1926B /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		158BB1F01F8BBC4400A1926B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		158BB1FD1F8BBC5900A1926B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +68,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158BB1FE1F8BBC5900A1926B /* CoreLocation.framework in Frameworks */,
+				158BB1F91F8BBC4400A1926B /* RxSwift.framework in Frameworks */,
+				158BB1F51F8BBC4400A1926B /* Realm.framework in Frameworks */,
+				158BB1F31F8BBC4400A1926B /* Kingfisher.framework in Frameworks */,
+				158BB1F71F8BBC4400A1926B /* RealmSwift.framework in Frameworks */,
+				158BB1F11F8BBC4400A1926B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +83,14 @@
 		158BB1891F86215D00A1926B = {
 			isa = PBXGroup;
 			children = (
+				158BB1EC1F8BBC4400A1926B /* Alamofire.framework */,
+				158BB1ED1F8BBC4400A1926B /* Kingfisher.framework */,
+				158BB1EE1F8BBC4400A1926B /* Realm.framework */,
+				158BB1EF1F8BBC4400A1926B /* RealmSwift.framework */,
+				158BB1F01F8BBC4400A1926B /* RxSwift.framework */,
 				158BB1941F86215D00A1926B /* Weather */,
 				158BB1931F86215D00A1926B /* Products */,
+				158BB1FC1F8BBC5900A1926B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +117,14 @@
 			path = Weather;
 			sourceTree = "<group>";
 		};
+		158BB1FC1F8BBC5900A1926B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				158BB1FD1F8BBC5900A1926B /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,6 +135,7 @@
 				158BB18E1F86215D00A1926B /* Sources */,
 				158BB18F1F86215D00A1926B /* Frameworks */,
 				158BB1901F86215D00A1926B /* Resources */,
+				158BB1FB1F8BBC4400A1926B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,6 +326,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ovso.Weather;
@@ -282,6 +342,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ovso.Weather;
@@ -309,6 +373,7 @@
 				158BB1A61F86215D00A1926B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreLocation
+
 
 class WeatherViewController: UIViewController {
 
