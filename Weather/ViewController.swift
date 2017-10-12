@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var textLabel: UILabel!
     
     var  timer = Timer()
     var count = 0
+    var locationManager: CLLocationManager!
     
    /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let weatherViewController: WeatherViewController = segue.destination as! WeatherViewController
@@ -30,7 +32,17 @@ class ViewController: UIViewController {
         if count == 5{
             timer.invalidate()
             activityIndicator.stopAnimating()
-            self.performSegue(withIdentifier: "weatherViewController", sender: self)
+            if Reachability.isConnectedToNetwork() == true {
+                print("Internet connection OK")
+                locationManager = CLLocationManager()
+                locationManager.delegate = self
+                locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                locationManager.requestWhenInUseAuthorization()
+                locationManager.startUpdatingLocation()
+                self.performSegue(withIdentifier: "weatherViewController", sender: self)
+            } else {
+                print("Internet connection FAILED")
+            }
         }
         
     }
@@ -42,11 +54,6 @@ class ViewController: UIViewController {
         
         activityIndicator.isHidden = true
         
-        if Reachability.isConnectedToNetwork() == true {
-            print("Internet connection OK")
-        } else {
-            print("Internet connection FAILED")
-        }
     }
 
     override func didReceiveMemoryWarning() {

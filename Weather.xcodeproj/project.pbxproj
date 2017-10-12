@@ -25,6 +25,7 @@
 		158BB1F91F8BBC4400A1926B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1F01F8BBC4400A1926B /* RxSwift.framework */; };
 		158BB1FA1F8BBC4400A1926B /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1F01F8BBC4400A1926B /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		158BB1FE1F8BBC5900A1926B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1FD1F8BBC5900A1926B /* CoreLocation.framework */; };
+		158BB2031F8D5B2200A1926B /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158BB2021F8D5B2200A1926B /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +62,7 @@
 		158BB1EF1F8BBC4400A1926B /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		158BB1F01F8BBC4400A1926B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		158BB1FD1F8BBC5900A1926B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		158BB2021F8D5B2200A1926B /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		158BB1941F86215D00A1926B /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				158BB2021F8D5B2200A1926B /* WeatherModel.swift */,
 				158BB1951F86215D00A1926B /* AppDelegate.swift */,
 				158BB1AB1F86934100A1926B /* WeatherViewController.swift */,
 				158BB1A71F8627A600A1926B /* Reachability.swift */,
@@ -136,6 +139,7 @@
 				158BB18F1F86215D00A1926B /* Frameworks */,
 				158BB1901F86215D00A1926B /* Resources */,
 				158BB1FB1F8BBC4400A1926B /* Embed Frameworks */,
+				158BB1FF1F8D598100A1926B /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -193,6 +197,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		158BB1FF1F8D598100A1926B /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "$(SRCROOT)/Carthage/Build/iOS/Realm.framework<br />$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		158BB18E1F86215D00A1926B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -202,6 +223,7 @@
 				158BB1AC1F86934100A1926B /* WeatherViewController.swift in Sources */,
 				158BB1961F86215D00A1926B /* AppDelegate.swift in Sources */,
 				158BB1A81F8627A600A1926B /* Reachability.swift in Sources */,
+				158BB2031F8D5B2200A1926B /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
