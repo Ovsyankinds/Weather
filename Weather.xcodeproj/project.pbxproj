@@ -26,6 +26,7 @@
 		158BB1FA1F8BBC4400A1926B /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1F01F8BBC4400A1926B /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		158BB1FE1F8BBC5900A1926B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158BB1FD1F8BBC5900A1926B /* CoreLocation.framework */; };
 		158BB2031F8D5B2200A1926B /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158BB2021F8D5B2200A1926B /* WeatherModel.swift */; };
+		158BB2051F90CA0700A1926B /* TempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158BB2041F90CA0700A1926B /* TempModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +64,7 @@
 		158BB1F01F8BBC4400A1926B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		158BB1FD1F8BBC5900A1926B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		158BB2021F8D5B2200A1926B /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = SOURCE_ROOT; };
+		158BB2041F90CA0700A1926B /* TempModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				158BB2021F8D5B2200A1926B /* WeatherModel.swift */,
 				158BB1951F86215D00A1926B /* AppDelegate.swift */,
 				158BB1AB1F86934100A1926B /* WeatherViewController.swift */,
+				158BB2041F90CA0700A1926B /* TempModel.swift */,
 				158BB1A71F8627A600A1926B /* Reachability.swift */,
 				158BB1971F86215D00A1926B /* ViewController.swift */,
 				158BB1991F86215D00A1926B /* Main.storyboard */,
@@ -222,6 +225,7 @@
 				158BB1981F86215D00A1926B /* ViewController.swift in Sources */,
 				158BB1AC1F86934100A1926B /* WeatherViewController.swift in Sources */,
 				158BB1961F86215D00A1926B /* AppDelegate.swift in Sources */,
+				158BB2051F90CA0700A1926B /* TempModel.swift in Sources */,
 				158BB1A81F8627A600A1926B /* Reachability.swift in Sources */,
 				158BB2031F8D5B2200A1926B /* WeatherModel.swift in Sources */,
 			);

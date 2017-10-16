@@ -27,7 +27,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }*/   
     func weatherScreen(){
         count = count + 1
-        self.textLabel.text = "Download data over \(count)"
+        self.textLabel.text! = "Download data over \(count)"
         activityIndicator.startAnimating()
         if count == 5{
             timer.invalidate()
