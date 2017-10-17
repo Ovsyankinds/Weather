@@ -32,6 +32,14 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     /*var date: String!
     var time: String!*/
     
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        if(status == CLAuthorizationStatus.denied){
+            print("denied")
+            self.performSegue(withIdentifier: "errorViewController", sender: self)
+        }
+        
+    }
     
     //Функция для получения координат местоположения устройства
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -40,8 +48,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         if(currentLocation.horizontalAccuracy > 0){
             locationManager.stopUpdatingLocation()
             //let coordinates = CLLocationCoordinate2DMake(53.195727, 45.022592) //Penza
-            //let coordinates = CLLocationCoordinate2DMake(54.230265, 45.125244) // Saransk
-            let coordinates = CLLocationCoordinate2DMake(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude)
+            let coordinates = CLLocationCoordinate2DMake(54.230265, 45.125244) // Saransk
+            //let coordinates = CLLocationCoordinate2DMake(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude)
             self.urlGeoCoder += "\(coordinates.latitude),\(coordinates.longitude)" //yandex
             //self.urlGeoCoder += "\(coordinates.latitude),\(coordinates.longitude)\(self.appKey)" //google
             //print(coordinates)
@@ -208,7 +216,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest

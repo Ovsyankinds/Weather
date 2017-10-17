@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import Alamofire
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -17,6 +18,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var  timer = Timer()
     var count = 0
     var locationManager: CLLocationManager!
+    var reachInternet: Int!
     
    /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let weatherViewController: WeatherViewController = segue.destination as! WeatherViewController
@@ -24,7 +26,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         /*if(segue.identifier == "weatherViewController"){
             weatherViewController
         }*/
-    }*/   
+    }*/
+ 
+    /*func foo(result: Int) -> Bool{
+        if(result == 200){
+            return true
+        }else{
+            return false
+        }
+        
+    }
+    
+    func reachability(){
+        let url = "http://api.openweathermap.org/data/2.5/weather?q=London&appid=9e14b3db00c4243c8cb215eec914140b"
+        
+        Alamofire.request(url).responseJSON{ response in
+            if let json = response.result.value{
+                //print(json)
+                var myJSON = json as! [String: Any]
+                let myJSONFinal = myJSON["cod"] as! Int
+                self.reachInternet! = myJSONFinal
+                print(self.reachInternet!)
+            }
+        }
+    }*/
+    
+ 
     func weatherScreen(){
         count = count + 1
         self.textLabel.text! = "Download data over \(count)"
@@ -32,7 +59,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if count == 5{
             timer.invalidate()
             activityIndicator.stopAnimating()
-            if Reachability.isConnectedToNetwork() == true {
+            
+            if Reachability.isConnectedToNetwork() == true{
+                print("Internet Connection Available!")
+                locationManager = CLLocationManager()
+                locationManager.delegate = self
+                locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                locationManager.requestWhenInUseAuthorization()
+                locationManager.startUpdatingLocation()
+                self.performSegue(withIdentifier: "weatherViewController", sender: self)
+
+            }else{
+                print("Internet Connection not Available!")
+            }
+            
+            /*if Reachability.isConnectedToNetwork() == true {
                 print("Internet connection OK")
                 locationManager = CLLocationManager()
                 locationManager.delegate = self
@@ -42,7 +83,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 self.performSegue(withIdentifier: "weatherViewController", sender: self)
             } else {
                 print("Internet connection FAILED")
-            }
+            }*/
         }
         
     }
